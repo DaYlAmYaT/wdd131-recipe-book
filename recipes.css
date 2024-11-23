@@ -39,12 +39,20 @@ input {
     border-style: solid;
     border-radius: 5px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .food-img {
     margin: 15px;
-    width: 300px;
+    width: 50%;
+    height: 400px;
+}
+
+.detail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 .category {
@@ -66,7 +74,12 @@ input {
 
 .rating {
     margin: 15px;
-    width: 3px;
+    /* width: 3px; */
+}
+
+.tags-container {
+    display: flex;
+    flex-direction: row;
 }
 
 p {
@@ -91,6 +104,10 @@ a img {
     width: fit-content;
 }
 
+#no-result {
+    text-align: center;
+}
+
 @media screen and (max-width: 600px) {
     p {
         display: none;
@@ -105,13 +122,17 @@ a img {
         width: fit-content;
         margin: auto auto;
     }
+
+    .recipe {
+        flex-direction: column;
+    }
+
+    .food-img, .detail {
+        width: auto;
+    }
 }
 
 @media screen and (min-width: 600px) {
-    .recipe {
-        flex-direction: row;
-    }
-
     #footer {
         display: flex;
         flex-direction: row-reverse;
